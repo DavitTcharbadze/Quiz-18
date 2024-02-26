@@ -15,7 +15,7 @@ export default function Weather() {
     async function weatherCalc() {
         setIsActive(true);
         try {
-            const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=7613e4a1a94e6aabee506df6d295566d`);
+            const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=7613e4a1a94e6aabee506df6d295566d`);
             const temperature = response.data.main.temp;
             setTemperature(temperature)
             console.log(response)
